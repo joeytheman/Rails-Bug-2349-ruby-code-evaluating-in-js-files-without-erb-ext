@@ -1,5 +1,6 @@
 Turkey::Application.routes.draw do
   resources :legs
+  root :to => 'legs#new' 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
