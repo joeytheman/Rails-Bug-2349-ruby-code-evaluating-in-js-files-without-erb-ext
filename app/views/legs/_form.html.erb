@@ -1,0 +1,21 @@
+<%= form_for(@leg) do |f| %>
+  <% if @leg.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@leg.errors.count, "error") %> prohibited this leg from being saved:</h2>
+
+      <ul>
+      <% @leg.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
