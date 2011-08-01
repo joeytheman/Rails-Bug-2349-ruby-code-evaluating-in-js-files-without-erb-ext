@@ -46,9 +46,11 @@ class LegsController < ApplicationController
       if @leg.save
         format.html { redirect_to @leg, notice: 'Leg was successfully created.' }
         format.json { render json: @leg, status: :created, location: @leg }
+        format.js     
       else
         format.html { render action: "new" }
         format.json { render json: @leg.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
